@@ -17,6 +17,15 @@ def LecturaArchivo(Ruta):
         for subHijo1 in hijo1.iter("organismo"):
             for  subHijo1_1 in subHijo1.iter("codigo"):
                 Codigo_Or = subHijo1_1.text
+            for  subHijo1_1 in subHijo1.iter("nombre"):
+                Nombre_Or = subHijo1_1.text
+    for hijo1 in Raiz.iter("listamuestra"):
+        for subHijo1 in hijo1.iter("Muestra"):
+            for  subHijo1_1 in subHijo1.iter("codigo"):
+                Codigo_Or = subHijo1_1.text
+        
+                
+    
             print(Codigo_Or)
 
 LecturaArchivo("HOI")
